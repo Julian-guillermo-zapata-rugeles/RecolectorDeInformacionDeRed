@@ -14,6 +14,9 @@ def escribirArchivo(lista_elementos):
     salida = str(len(lista_elementos))+";"  # ESCRITURA DE NUMERO DE CONECTADOS (ENTERA)
     salida = salida + str(time.localtime()[0:5]).replace(" ","").replace(",","/")+";" # FECHA Y HORA DEL SISTEMA
     salida = salida +"/".join(lista_elementos) # IP DE LOS DISPOSITIVOS
-    
 
-    print(salida)
+    # UTILIZA TU SALIDA DE PREFERENCIA #
+    archivo_salida =  open("ANALITICAS/analiticas.py","a")
+    archivo_salida.write(salida)
+    archivo_salida.write("\n")
+    archivo_salida.close()
