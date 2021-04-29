@@ -32,4 +32,4 @@ Fue testeado en debian buster 10
 """
 
 dispositivo_activos = modulo_ping.BusquedaPorRango(20,30)
-modulo_escritura.escribirArchivo(dispositivo_activos)
+modulo_escritura.escribirArchivoCompleto(dispositivo_activos)
