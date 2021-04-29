@@ -1,4 +1,8 @@
 import modulo_ping
+import modulo_menu
+import modulo_escritura
+
+
 
 __author__ = "Julian Guillemo Zapata Rugeles"
 __correo__ = "julianruggeles@gmail.com"
@@ -27,4 +31,5 @@ Fue testeado en debian buster 10
 
 """
 
-modulo_ping.BusquedaPorRango(10,30)
+dispositivo_activos = modulo_ping.BusquedaPorRango(20,30)
+modulo_escritura.escribirArchivo(dispositivo_activos)
