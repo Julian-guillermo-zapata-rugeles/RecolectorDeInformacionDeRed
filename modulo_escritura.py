@@ -1,6 +1,7 @@
 import os
 import time
 import modulo_speed
+import modulo_status
 
 def crearCarpeta():
     #creacion de la carpeta analiticas
@@ -44,12 +45,12 @@ def escribirArchivoCompleto(lista_elementos):
     # obtenemos la velocidad del internet en dicho momento
     velocidad_obtenida = modulo_speed.obtenerVelocidad()
     #print("vel : ",velocidad_obtenida)
-
-
+    estado_tarjeta = modulo_status.obtenerEstadoTarjetaRed()
 
     salida = str(len(lista_elementos))+";"  # ESCRITURA DE NUMERO DE CONECTADOS (ENTERA)
     salida = salida + str(time.localtime()[0:5]).replace(" ","").replace(",","/")+";" # FECHA Y HORA DEL SISTEMA
     salida = salida + velocidad_obtenida + ";" # VELOCIDAD
+    salida = salida + estado_tarjeta + ";"
     salida = salida +"/".join(lista_elementos) # IP DE LOS DISPOSITIVOS
 
     print(salida)
